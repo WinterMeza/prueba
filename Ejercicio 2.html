@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type"
+		 content="text/html;charset=utf-8">
+	<title>Objetos</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+     
+     //  Se crea el objeto Productos_Alimenticio
+     function Productos_Alimenticio(codigo_in, nombre_in, precio_in){ 
+   			this.codigo = codigo_in;// Propiedades
+   			this.nombre = nombre_in;//Propiedades
+			this.precio = precio_in;//Propiedades
+   			this.imprimeDatos = imprimeDatosTotal; //Metodo imprimir datos total
+		}
+        	
+	   // Se crean las instancias del objeto y se guarda en un Array (Vector)
+		var producto1 = new Productos_Alimenticio("1","Aceite", "2.80"); //ARRAY 1
+		var producto2 = new Productos_Alimenticio("2","Azúcar", "1.50");//ARRAY 2
+		var producto3 = new Productos_Alimenticio("3","Arroz", "0.80");// ARRAY 3
+
+		function imprimeDatosTotal(){ 
+   			document.write("<br><br>Código: " + this.codigo);
+   			document.write("<br>Nombre: " + this.nombre);
+   			document.write("<br>Precio: " + this.precio);
+		}
+		// Se muestra con un bucle for el método imprimeDatos para mostrar por pantalla los 
+		// de los tres objetos instanciados
+		var productos = new Array(producto1, producto2, producto3);
+		for(var i=0; i<productos.length; i++){
+			productos[i].imprimeDatos();
+		}
+	</script>
+</body>
+</html>
+
+

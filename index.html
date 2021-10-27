@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller5_TA5</title>
+    <link rel="icon" href="img/Calculadora.png">
+</head>
+<!--EJERCICIO 1-->
+
+<body>
+    <h2> EJERCICIO 1</h2>
+    <script type="text/javascript">
+        var meses = new Array('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+        for (i = 0; i < meses.length; i++) {
+            document.write("<br>" + meses[i]);
+        }
+    </script>
+
+    <h2>Ejercio 2</h2>
+    <!--EJERCICIO 2-->
+    <script type="text/javascript">
+        function imprimeDatosTotal() {
+            document.write("<br><br>C&oacute;digo: " + this.codigo);
+            document.write("<br>Nombre: " + this.nombre);
+            document.write("<br>Precio: " + this.precio);
+        }
+
+        function ProductosAlimenticios(codigo_in, nombre_in, precio_in) {
+            this.codigo = codigo_in;
+            this.nombre = nombre_in;
+            this.precio = precio_in;
+            this.imprimeDatos = imprimeDatosTotal;
+        }
+    </script>
+    </head>
+
+    <body>
+        <script type="text/javascript">
+            var producto1 = new ProductosAlimenticios("1", "Arroz", "1.40");
+            var producto2 = new ProductosAlimenticios("2", "Azúcar", "1.30");
+            var producto3 = new ProductosAlimenticios("3", "Aceite", "2.30");
+
+            var productos = new Array(producto1, producto2, producto3);
+            for (i = 0; i < productos.length; i++) {
+                productos[i].imprimeDatos();
+            }
+        </script>
+    </body>
+</body>
+</html>
